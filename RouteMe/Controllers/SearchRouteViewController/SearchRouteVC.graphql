@@ -1,0 +1,8 @@
+query GetStop {
+    stops {
+        gtfsId
+        name
+        lat
+        lon
+    }
+}

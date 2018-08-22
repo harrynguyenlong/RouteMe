@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		41214BAF20F9E68E00FEF8DC /* TransportOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41214BAE20F9E68E00FEF8DC /* TransportOptionViewController.swift */; };
+		41214BB120FB4D7B00FEF8DC /* TransportOptionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41214BB020FB4D7B00FEF8DC /* TransportOptionHeaderView.swift */; };
+		41274AFC211B2F4200E0B214 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274AFB211B2F4200E0B214 /* SearchRequest.swift */; };
+		41274AFE211B8E4C00E0B214 /* GetSearchResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274AFD211B8E4C00E0B214 /* GetSearchResultService.swift */; };
+		41274B02211C21FE00E0B214 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274B01211C21FE00E0B214 /* SearchCell.swift */; };
+		41274B05211C707F00E0B214 /* RecentSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274B04211C707F00E0B214 /* RecentSearchModel.swift */; };
+		41274B07211C887500E0B214 /* RecentSearchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274B06211C887500E0B214 /* RecentSearchHeader.swift */; };
+		41274B09211CE13800E0B214 /* TransportOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274B08211CE13800E0B214 /* TransportOptionModel.swift */; };
+		41274B0B211E09AB00E0B214 /* RouteSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274B0A211E09AB00E0B214 /* RouteSettingController.swift */; };
+		41274B0D211ECCA900E0B214 /* RouteTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274B0C211ECCA900E0B214 /* RouteTypeModel.swift */; };
+		412991B8211508FB00F9F0D6 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412991B7211508FB00F9F0D6 /* Address.swift */; };
+		412991BA21188FCE00F9F0D6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412991B921188FCE00F9F0D6 /* Environment.swift */; };
+		412991BC2118900800F9F0D6 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412991BB2118900800F9F0D6 /* NetworkDispatcher.swift */; };
+		412991BE2118902F00F9F0D6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412991BD2118902F00F9F0D6 /* Response.swift */; };
+		412991C02118904F00F9F0D6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412991BF2118904F00F9F0D6 /* Service.swift */; };
+		412991C2211B0E9700F9F0D6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412991C1211B0E9700F9F0D6 /* Location.swift */; };
+		4134A32620FF736B008996F3 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134A32520FF736B008996F3 /* TimePickerViewController.swift */; };
+		4134A3292104F51B008996F3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134A3282104F51B008996F3 /* SearchViewController.swift */; };
+		4134A32B2104F6DE008996F3 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134A32A2104F6DE008996F3 /* SearchResultViewController.swift */; };
+		4134A32E2108FE9B008996F3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4134A32D2108FE9B008996F3 /* Request.swift */; };
+		4150067120F4C81000A118EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4150067020F4C81000A118EB /* Extensions.swift */; };
+		41560A6F211342B800937143 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41560A6E211342B800937143 /* SearchViewCell.swift */; };
+		41560A712113B49400937143 /* SearchViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41560A702113B49400937143 /* SearchViewCellModel.swift */; };
+		41560A742113B83000937143 /* ChooseLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41560A732113B83000937143 /* ChooseLocationViewController.swift */; };
+		41560A7621146D2200937143 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41560A7521146D2200937143 /* CustomLabel.swift */; };
+		416368A420EE68ED0045EB15 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416368A320EE68ED0045EB15 /* API.swift */; };
+		418E812C20FB5FD9003299ED /* RouteTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E812B20FB5FD9003299ED /* RouteTypeCell.swift */; };
+		418E812E20FB6DAC003299ED /* TransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E812D20FB6DAC003299ED /* TransportTypeCell.swift */; };
+		418E813020FCC545003299ED /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E812F20FCC545003299ED /* TransportType.swift */; };
+		418E813320FEAB84003299ED /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E813220FEAB84003299ED /* SlideInPresentationManager.swift */; };
+		418E813620FEB034003299ED /* TimeOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E813520FEB034003299ED /* TimeOptionViewController.swift */; };
+		418E813820FEB133003299ED /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E813720FEB133003299ED /* SlideInPresentationController.swift */; };
+		419C07A720EE0FC0007D64D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C07A620EE0FC0007D64D4 /* AppDelegate.swift */; };
+		419C07A920EE0FC0007D64D4 /* SearchRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C07A820EE0FC0007D64D4 /* SearchRouteViewController.swift */; };
+		419C07AC20EE0FC0007D64D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419C07AA20EE0FC0007D64D4 /* Main.storyboard */; };
+		419C07AE20EE0FC3007D64D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419C07AD20EE0FC3007D64D4 /* Assets.xcassets */; };
+		419C07B120EE0FC3007D64D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419C07AF20EE0FC3007D64D4 /* LaunchScreen.storyboard */; };
+		419C07BC20EE147C007D64D4 /* SearchRouteVC.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 419C07BB20EE147C007D64D4 /* SearchRouteVC.graphql */; };
+		419C07BE20EE196A007D64D4 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 419C07BD20EE196A007D64D4 /* schema.json */; };
+		44FC56D1DD00AF5145FB428E /* Pods_RouteMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C664D589F6F2BA3075CF39 /* Pods_RouteMe.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		41214BAE20F9E68E00FEF8DC /* TransportOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOptionViewController.swift; sourceTree = "<group>"; };
+		41214BB020FB4D7B00FEF8DC /* TransportOptionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOptionHeaderView.swift; sourceTree = "<group>"; };
+		41274AFB211B2F4200E0B214 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		41274AFD211B8E4C00E0B214 /* GetSearchResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchResultService.swift; sourceTree = "<group>"; };
+		41274B01211C21FE00E0B214 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		41274B04211C707F00E0B214 /* RecentSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchModel.swift; sourceTree = "<group>"; };
+		41274B06211C887500E0B214 /* RecentSearchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchHeader.swift; sourceTree = "<group>"; };
+		41274B08211CE13800E0B214 /* TransportOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOptionModel.swift; sourceTree = "<group>"; };
+		41274B0A211E09AB00E0B214 /* RouteSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteSettingController.swift; sourceTree = "<group>"; };
+		41274B0C211ECCA900E0B214 /* RouteTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTypeModel.swift; sourceTree = "<group>"; };
+		412991B7211508FB00F9F0D6 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		412991B921188FCE00F9F0D6 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		412991BB2118900800F9F0D6 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		412991BD2118902F00F9F0D6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		412991BF2118904F00F9F0D6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		412991C1211B0E9700F9F0D6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4134A32520FF736B008996F3 /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		4134A3282104F51B008996F3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4134A32A2104F6DE008996F3 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		4134A32D2108FE9B008996F3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		4150067020F4C81000A118EB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		41560A6E211342B800937143 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		41560A702113B49400937143 /* SearchViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCellModel.swift; sourceTree = "<group>"; };
+		41560A732113B83000937143 /* ChooseLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLocationViewController.swift; sourceTree = "<group>"; };
+		41560A7521146D2200937143 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		416368A320EE68ED0045EB15 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		418E812B20FB5FD9003299ED /* RouteTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTypeCell.swift; sourceTree = "<group>"; };
+		418E812D20FB6DAC003299ED /* TransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTypeCell.swift; sourceTree = "<group>"; };
+		418E812F20FCC545003299ED /* TransportType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
+		418E813220FEAB84003299ED /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
+		418E813520FEB034003299ED /* TimeOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOptionViewController.swift; sourceTree = "<group>"; };
+		418E813720FEB133003299ED /* SlideInPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
+		419C07A320EE0FC0007D64D4 /* RouteMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RouteMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		419C07A620EE0FC0007D64D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		419C07A820EE0FC0007D64D4 /* SearchRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouteViewController.swift; sourceTree = "<group>"; };
+		419C07AB20EE0FC0007D64D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		419C07AD20EE0FC3007D64D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		419C07B020EE0FC3007D64D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		419C07B220EE0FC4007D64D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		419C07BB20EE147C007D64D4 /* SearchRouteVC.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SearchRouteVC.graphql; sourceTree = "<group>"; };
+		419C07BD20EE196A007D64D4 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		45C664D589F6F2BA3075CF39 /* Pods_RouteMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouteMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F6251EAA363CB72399B4AF /* Pods-RouteMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouteMe/Pods-RouteMe.debug.xcconfig"; sourceTree = "<group>"; };
+		AE4979D3150F5F3B3F78A4FA /* Pods-RouteMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RouteMe/Pods-RouteMe.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		419C07A020EE0FC0007D64D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44FC56D1DD00AF5145FB428E /* Pods_RouteMe.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41214BAD20F9E66400FEF8DC /* TransportOptionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41214BAE20F9E68E00FEF8DC /* TransportOptionViewController.swift */,
+			);
+			path = TransportOptionViewController;
+			sourceTree = "<group>";
+		};
+		41274AFA211B2F3300E0B214 /* SearchRequest */ = {
+			isa = PBXGroup;
+			children = (
+				41274AFB211B2F4200E0B214 /* SearchRequest.swift */,
+				41274AFD211B8E4C00E0B214 /* GetSearchResultService.swift */,
+			);
+			path = SearchRequest;
+			sourceTree = "<group>";
+		};
+		41274B03211C707000E0B214 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				41274B04211C707F00E0B214 /* RecentSearchModel.swift */,
+				41274B08211CE13800E0B214 /* TransportOptionModel.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		4134A3272104F50C008996F3 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4134A3282104F51B008996F3 /* SearchViewController.swift */,
+				4134A32A2104F6DE008996F3 /* SearchResultViewController.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		4134A32C2108FDB3008996F3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				41274AFA211B2F3300E0B214 /* SearchRequest */,
+				4134A32D2108FE9B008996F3 /* Request.swift */,
+				412991B921188FCE00F9F0D6 /* Environment.swift */,
+				412991BB2118900800F9F0D6 /* NetworkDispatcher.swift */,
+				412991BD2118902F00F9F0D6 /* Response.swift */,
+				412991BF2118904F00F9F0D6 /* Service.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4150066920F4B83900A118EB /* Apollo */ = {
+			isa = PBXGroup;
+			children = (
+				416368A320EE68ED0045EB15 /* API.swift */,
+			);
+			path = Apollo;
+			sourceTree = "<group>";
+		};
+		4150066A20F4B84E00A118EB /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				419C07B220EE0FC4007D64D4 /* Info.plist */,
+				419C07AA20EE0FC0007D64D4 /* Main.storyboard */,
+				419C07AF20EE0FC3007D64D4 /* LaunchScreen.storyboard */,
+				419C07AD20EE0FC3007D64D4 /* Assets.xcassets */,
+				419C07A620EE0FC0007D64D4 /* AppDelegate.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		4150066B20F4B87300A118EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41274B03211C707000E0B214 /* RealmModel */,
+				418E812F20FCC545003299ED /* TransportType.swift */,
+				41560A702113B49400937143 /* SearchViewCellModel.swift */,
+				412991B7211508FB00F9F0D6 /* Address.swift */,
+				412991C1211B0E9700F9F0D6 /* Location.swift */,
+				41274B0C211ECCA900E0B214 /* RouteTypeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4150066C20F4B87B00A118EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41214BB020FB4D7B00FEF8DC /* TransportOptionHeaderView.swift */,
+				418E812B20FB5FD9003299ED /* RouteTypeCell.swift */,
+				418E812D20FB6DAC003299ED /* TransportTypeCell.swift */,
+				41560A6E211342B800937143 /* SearchViewCell.swift */,
+				41274B01211C21FE00E0B214 /* SearchCell.swift */,
+				41274B06211C887500E0B214 /* RecentSearchHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4150066D20F4B88200A118EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				41560A722113B81900937143 /* ChooseLocationViewController */,
+				4134A3272104F50C008996F3 /* SearchViewController */,
+				418E813420FEAE67003299ED /* TimeOptionViewController */,
+				418E813120FEAB23003299ED /* CustomPresentation */,
+				41214BAD20F9E66400FEF8DC /* TransportOptionViewController */,
+				4150066E20F4BE3000A118EB /* SearchRouteViewController */,
+				4134A32520FF736B008996F3 /* TimePickerViewController.swift */,
+				41274B0A211E09AB00E0B214 /* RouteSettingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4150066E20F4BE3000A118EB /* SearchRouteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				419C07A820EE0FC0007D64D4 /* SearchRouteViewController.swift */,
+				419C07BB20EE147C007D64D4 /* SearchRouteVC.graphql */,
+			);
+			path = SearchRouteViewController;
+			sourceTree = "<group>";
+		};
+		4150066F20F4C7F100A118EB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4150067020F4C81000A118EB /* Extensions.swift */,
+				41560A7521146D2200937143 /* CustomLabel.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		41560A722113B81900937143 /* ChooseLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				41560A732113B83000937143 /* ChooseLocationViewController.swift */,
+			);
+			path = ChooseLocationViewController;
+			sourceTree = "<group>";
+		};
+		418E813120FEAB23003299ED /* CustomPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				418E813220FEAB84003299ED /* SlideInPresentationManager.swift */,
+				418E813720FEB133003299ED /* SlideInPresentationController.swift */,
+			);
+			path = CustomPresentation;
+			sourceTree = "<group>";
+		};
+		418E813420FEAE67003299ED /* TimeOptionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				418E813520FEB034003299ED /* TimeOptionViewController.swift */,
+			);
+			path = TimeOptionViewController;
+			sourceTree = "<group>";
+		};
+		419C079A20EE0FC0007D64D4 = {
+			isa = PBXGroup;
+			children = (
+				419C07A520EE0FC0007D64D4 /* RouteMe */,
+				419C07A420EE0FC0007D64D4 /* Products */,
+				4B7D9EFBF6EF6F98F71300D1 /* Pods */,
+				438E18B13198800D104D61F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		419C07A420EE0FC0007D64D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				419C07A320EE0FC0007D64D4 /* RouteMe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		419C07A520EE0FC0007D64D4 /* RouteMe */ = {
+			isa = PBXGroup;
+			children = (
+				4134A32C2108FDB3008996F3 /* Networking */,
+				419C07BD20EE196A007D64D4 /* schema.json */,
+				4150066D20F4B88200A118EB /* Controllers */,
+				4150066C20F4B87B00A118EB /* Views */,
+				4150066F20F4C7F100A118EB /* Utils */,
+				4150066B20F4B87300A118EB /* Models */,
+				4150066A20F4B84E00A118EB /* Singletons */,
+				4150066920F4B83900A118EB /* Apollo */,
+			);
+			path = RouteMe;
+			sourceTree = "<group>";
+		};
+		438E18B13198800D104D61F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45C664D589F6F2BA3075CF39 /* Pods_RouteMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B7D9EFBF6EF6F98F71300D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45F6251EAA363CB72399B4AF /* Pods-RouteMe.debug.xcconfig */,
+				AE4979D3150F5F3B3F78A4FA /* Pods-RouteMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		419C07A220EE0FC0007D64D4 /* RouteMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419C07B520EE0FC4007D64D4 /* Build configuration list for PBXNativeTarget "RouteMe" */;
+			buildPhases = (
+				9560562AC3741E9449E62B4B /* [CP] Check Pods Manifest.lock */,
+				419C07B820EE103A007D64D4 /* Generate Apollo GraphQL API */,
+				419C079F20EE0FC0007D64D4 /* Sources */,
+				419C07A020EE0FC0007D64D4 /* Frameworks */,
+				419C07A120EE0FC0007D64D4 /* Resources */,
+				63162900FD21F02142819DD8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RouteMe;
+			productName = RouteMe;
+			productReference = 419C07A320EE0FC0007D64D4 /* RouteMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		419C079B20EE0FC0007D64D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Long Nguyen";
+				TargetAttributes = {
+					419C07A220EE0FC0007D64D4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 419C079E20EE0FC0007D64D4 /* Build configuration list for PBXProject "RouteMe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 419C079A20EE0FC0007D64D4;
+			productRefGroup = 419C07A420EE0FC0007D64D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				419C07A220EE0FC0007D64D4 /* RouteMe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		419C07A120EE0FC0007D64D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				419C07B120EE0FC3007D64D4 /* LaunchScreen.storyboard in Resources */,
+				419C07BE20EE196A007D64D4 /* schema.json in Resources */,
+				419C07AE20EE0FC3007D64D4 /* Assets.xcassets in Resources */,
+				419C07AC20EE0FC0007D64D4 /* Main.storyboard in Resources */,
+				419C07BC20EE147C007D64D4 /* SearchRouteVC.graphql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		419C07B820EE103A007D64D4 /* Generate Apollo GraphQL API */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Apollo GraphQL API";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+		};
+		63162900FD21F02142819DD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RouteMe/Pods-RouteMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RouteMe/Pods-RouteMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9560562AC3741E9449E62B4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RouteMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		419C079F20EE0FC0007D64D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418E813320FEAB84003299ED /* SlideInPresentationManager.swift in Sources */,
+				412991BC2118900800F9F0D6 /* NetworkDispatcher.swift in Sources */,
+				412991C02118904F00F9F0D6 /* Service.swift in Sources */,
+				4134A32E2108FE9B008996F3 /* Request.swift in Sources */,
+				41560A712113B49400937143 /* SearchViewCellModel.swift in Sources */,
+				418E813020FCC545003299ED /* TransportType.swift in Sources */,
+				419C07A920EE0FC0007D64D4 /* SearchRouteViewController.swift in Sources */,
+				418E812E20FB6DAC003299ED /* TransportTypeCell.swift in Sources */,
+				412991B8211508FB00F9F0D6 /* Address.swift in Sources */,
+				41274B07211C887500E0B214 /* RecentSearchHeader.swift in Sources */,
+				41274B02211C21FE00E0B214 /* SearchCell.swift in Sources */,
+				412991BA21188FCE00F9F0D6 /* Environment.swift in Sources */,
+				41274B09211CE13800E0B214 /* TransportOptionModel.swift in Sources */,
+				416368A420EE68ED0045EB15 /* API.swift in Sources */,
+				41214BB120FB4D7B00FEF8DC /* TransportOptionHeaderView.swift in Sources */,
+				41274B0B211E09AB00E0B214 /* RouteSettingController.swift in Sources */,
+				41214BAF20F9E68E00FEF8DC /* TransportOptionViewController.swift in Sources */,
+				41274AFE211B8E4C00E0B214 /* GetSearchResultService.swift in Sources */,
+				4134A32B2104F6DE008996F3 /* SearchResultViewController.swift in Sources */,
+				418E812C20FB5FD9003299ED /* RouteTypeCell.swift in Sources */,
+				41560A7621146D2200937143 /* CustomLabel.swift in Sources */,
+				4134A3292104F51B008996F3 /* SearchViewController.swift in Sources */,
+				412991BE2118902F00F9F0D6 /* Response.swift in Sources */,
+				41560A6F211342B800937143 /* SearchViewCell.swift in Sources */,
+				419C07A720EE0FC0007D64D4 /* AppDelegate.swift in Sources */,
+				4150067120F4C81000A118EB /* Extensions.swift in Sources */,
+				418E813820FEB133003299ED /* SlideInPresentationController.swift in Sources */,
+				418E813620FEB034003299ED /* TimeOptionViewController.swift in Sources */,
+				41274B05211C707F00E0B214 /* RecentSearchModel.swift in Sources */,
+				412991C2211B0E9700F9F0D6 /* Location.swift in Sources */,
+				4134A32620FF736B008996F3 /* TimePickerViewController.swift in Sources */,
+				41274B0D211ECCA900E0B214 /* RouteTypeModel.swift in Sources */,
+				41274AFC211B2F4200E0B214 /* SearchRequest.swift in Sources */,
+				41560A742113B83000937143 /* ChooseLocationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		419C07AA20EE0FC0007D64D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419C07AB20EE0FC0007D64D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		419C07AF20EE0FC3007D64D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				419C07B020EE0FC3007D64D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		419C07B320EE0FC4007D64D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		419C07B420EE0FC4007D64D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		419C07B620EE0FC4007D64D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45F6251EAA363CB72399B4AF /* Pods-RouteMe.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8F4PL5XYD;
+				INFOPLIST_FILE = "$(SRCROOT)/RouteMe/Singletons/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mypokedex.RouteMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		419C07B720EE0FC4007D64D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE4979D3150F5F3B3F78A4FA /* Pods-RouteMe.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8F4PL5XYD;
+				INFOPLIST_FILE = "$(SRCROOT)/RouteMe/Singletons/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mypokedex.RouteMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		419C079E20EE0FC0007D64D4 /* Build configuration list for PBXProject "RouteMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419C07B320EE0FC4007D64D4 /* Debug */,
+				419C07B420EE0FC4007D64D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419C07B520EE0FC4007D64D4 /* Build configuration list for PBXNativeTarget "RouteMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				419C07B620EE0FC4007D64D4 /* Debug */,
+				419C07B720EE0FC4007D64D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 419C079B20EE0FC0007D64D4 /* Project object */;
+}
