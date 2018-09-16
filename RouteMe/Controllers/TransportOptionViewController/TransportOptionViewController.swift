@@ -90,11 +90,11 @@ class TransportOptionViewController: UIViewController, UITableViewDelegate, UITa
             transportType[0].isChoosen = true
         }
         
-        if listOfTransportType.contains(.train) {
+        if listOfTransportType.contains(.rail) {
             transportType[1].isChoosen = true
         }
         
-        if listOfTransportType.contains(.metro) {
+        if listOfTransportType.contains(.subway) {
             transportType[2].isChoosen = true
         }
         
@@ -267,10 +267,10 @@ class TransportOptionViewController: UIViewController, UITableViewDelegate, UITa
                     transportMethods.append(.bus)
                 case 1:
                     
-                    transportMethods.append(.train)
+                    transportMethods.append(.rail)
                 case 2:
                     
-                    transportMethods.append(.metro)
+                    transportMethods.append(.subway)
                 case 3:
                     
                     transportMethods.append(.tram)
@@ -327,11 +327,11 @@ class TransportOptionViewController: UIViewController, UITableViewDelegate, UITa
                 case 1:
                     print("train")
                     
-                    RouteSettingController.share.addTransportType(transportType: .train)
+                    RouteSettingController.share.addTransportType(transportType: .rail)
                 case 2:
                     print("metro")
                     
-                    RouteSettingController.share.addTransportType(transportType: .metro)
+                    RouteSettingController.share.addTransportType(transportType: .subway)
                 case 3:
                     print("Tram")
                     

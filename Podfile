@@ -11,4 +11,5 @@ target 'RouteMe' do
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftyJSON', '~> 4.1'
   pod 'PMAlertController', '~> 3.4'
+  pod 'DZNEmptyDataSet', '~> 1.8'
 end

@@ -17,8 +17,8 @@ enum RouteType: String {
 
 enum TransportTypeRealm: String {
     case bus
-    case train
-    case metro
+    case rail
+    case subway
     case tram
     case ferry
 }

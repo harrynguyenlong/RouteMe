@@ -14,7 +14,14 @@ enum PickingMode {
     case arrival
 }
 
+protocol TimePickerViewControllerDelegate {
+    func timePickerViewController(didSelectDepartureTime date: Date)
+    func timePickerViewController(didSelectArrivalTime date: Date)
+}
+
 class TimePickerViewController: UIViewController {
+    
+    var delegate: TimePickerViewControllerDelegate?
     
     var pickingMode: PickingMode? {
         didSet {
@@ -113,9 +120,42 @@ class TimePickerViewController: UIViewController {
     // MARK: Gesture methods
     
     @objc private func handleDoneBtnTapped() {
-        print(self.pickView.date)
         
-        self.dismiss(animated: true, completion: nil)
+        guard let pickMode = pickingMode else {
+            return
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        let dateString = dateFormatter.string(from: self.pickView.date)
+        
+        let hourFormatter = DateFormatter()
+        hourFormatter.dateFormat = "hh:mm:ss"
+        let timeString = hourFormatter.string(from: self.pickView.date)
+        
+        if pickMode == .departure {
+            delegate?.timePickerViewController(didSelectDepartureTime: self.pickView.date)
+            
+            setTimeInfoToRouteSetting(dateString: dateString, timeString: timeString, mode: pickMode)
+            
+        } else {
+            delegate?.timePickerViewController(didSelectArrivalTime: self.pickView.date)
+            
+            setTimeInfoToRouteSetting(dateString: dateString, timeString: timeString, mode: pickMode)
+        }
+        
+         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func setTimeInfoToRouteSetting(dateString: String, timeString: String, mode: PickingMode) {
+        RouteSettingController.share.dateString = dateString
+        RouteSettingController.share.timeString = timeString
+        
+        if mode == .departure {
+            RouteSettingController.share.timeTransportOption = .departure
+        } else if mode == .arrival {
+            RouteSettingController.share.timeTransportOption = .arrival
+        }
     }
     
     @objc private func handleCloseIconTapped() {

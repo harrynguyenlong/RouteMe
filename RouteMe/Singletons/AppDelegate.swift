@@ -9,6 +9,9 @@
 import UIKit
 import Apollo
 
+let graphQLEndPoint = "http://api.digitransit.fi/routing/v1/routers/hsl/index/graphql"
+let apollo = ApolloClient(url: URL(string: graphQLEndPoint)!)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        
-//        let navVC = UINavigationController(rootViewController: SearchRouteViewController())
         
         let navVC = UINavigationController(rootViewController: SearchRouteViewController())
         

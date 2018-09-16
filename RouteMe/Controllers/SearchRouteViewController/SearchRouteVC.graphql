@@ -1,8 +1,71 @@
-query GetStop {
-    stops {
-        gtfsId
-        name
-        lat
-        lon
+query GetIntinaries($fromPlace: String, $fromLocationLatitude: Float!, $fromLocationLongitude: Float!, $toPlace: String, $toLocationLatitude: Float!, $toLocationLongitude: Float!, $modes: String, $date: String, $time: String, $arriveBy: Boolean) {
+    plan(
+         fromPlace: $fromPlace,
+         from: {lat: $fromLocationLatitude, lon: $fromLocationLongitude},
+         toPlace: $toPlace,
+         to: {lat: $toLocationLatitude, lon: $toLocationLongitude},
+         modes: $modes,
+         walkReluctance: 2.1,
+         walkBoardCost: 600,
+         date:$date,
+         time:$time,
+         minTransferTime: 180,
+         walkSpeed: 1.2,
+         arriveBy: $arriveBy
+         ) {
+        itineraries{
+           ...ItineryDetail
+        }
     }
 }
+
+fragment ItineryDetail on Itinerary {
+    walkDistance,
+    duration,
+    fares {
+        type
+        currency
+        cents
+    }
+    legs {
+        mode
+        startTime
+        duration
+        trip {
+            tripHeadsign
+            tripShortName
+            route {
+                shortName
+            }
+        }
+        agency {
+            id
+            name
+        }
+        endTime
+        from {
+            lat
+            lon
+            name
+            stop {
+                code
+                name
+            }
+        },
+        to {
+            lat
+            lon
+            name
+        },
+        agency {
+            id
+        },
+        distance
+        legGeometry {
+            length
+            points
+        }
+    }
+}
+
+

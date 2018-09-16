@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4111777B214F018C00CE28D0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4111777A214F018C00CE28D0 /* Reachability.swift */; };
 		41214BAF20F9E68E00FEF8DC /* TransportOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41214BAE20F9E68E00FEF8DC /* TransportOptionViewController.swift */; };
 		41214BB120FB4D7B00FEF8DC /* TransportOptionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41214BB020FB4D7B00FEF8DC /* TransportOptionHeaderView.swift */; };
+		4125E4FF2148274600ADA054 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E4FE2148274600ADA054 /* API.swift */; };
+		4125E5012148ED3000ADA054 /* MainBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5002148ED3000ADA054 /* MainBaseCell.swift */; };
+		4125E5032148F49B00ADA054 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5022148F49B00ADA054 /* BaseView.swift */; };
+		4125E50521491EFB00ADA054 /* OneTransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E50421491EFB00ADA054 /* OneTransportTypeCell.swift */; };
+		4125E50721499F1800ADA054 /* TwoTransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E50621499F1800ADA054 /* TwoTransportTypeCell.swift */; };
+		4125E5092149A42300ADA054 /* ThreeTransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E5082149A42300ADA054 /* ThreeTransportTypeCell.swift */; };
+		4125E50B2149A7CA00ADA054 /* FourTransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E50A2149A7CA00ADA054 /* FourTransportTypeCell.swift */; };
+		4125E50D2149A97A00ADA054 /* FiveTransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E50C2149A97A00ADA054 /* FiveTransportTypeCell.swift */; };
+		4125E50F2149ACB900ADA054 /* SixTransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125E50E2149ACB900ADA054 /* SixTransportTypeCell.swift */; };
 		41274AFC211B2F4200E0B214 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274AFB211B2F4200E0B214 /* SearchRequest.swift */; };
 		41274AFE211B8E4C00E0B214 /* GetSearchResultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274AFD211B8E4C00E0B214 /* GetSearchResultService.swift */; };
 		41274B02211C21FE00E0B214 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41274B01211C21FE00E0B214 /* SearchCell.swift */; };
@@ -32,7 +42,7 @@
 		41560A712113B49400937143 /* SearchViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41560A702113B49400937143 /* SearchViewCellModel.swift */; };
 		41560A742113B83000937143 /* ChooseLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41560A732113B83000937143 /* ChooseLocationViewController.swift */; };
 		41560A7621146D2200937143 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41560A7521146D2200937143 /* CustomLabel.swift */; };
-		416368A420EE68ED0045EB15 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416368A320EE68ED0045EB15 /* API.swift */; };
+		417464FF2148105500658D35 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 417464FE2148105500658D35 /* schema.json */; };
 		418E812C20FB5FD9003299ED /* RouteTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E812B20FB5FD9003299ED /* RouteTypeCell.swift */; };
 		418E812E20FB6DAC003299ED /* TransportTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E812D20FB6DAC003299ED /* TransportTypeCell.swift */; };
 		418E813020FCC545003299ED /* TransportType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418E812F20FCC545003299ED /* TransportType.swift */; };
@@ -45,13 +55,22 @@
 		419C07AE20EE0FC3007D64D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 419C07AD20EE0FC3007D64D4 /* Assets.xcassets */; };
 		419C07B120EE0FC3007D64D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 419C07AF20EE0FC3007D64D4 /* LaunchScreen.storyboard */; };
 		419C07BC20EE147C007D64D4 /* SearchRouteVC.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 419C07BB20EE147C007D64D4 /* SearchRouteVC.graphql */; };
-		419C07BE20EE196A007D64D4 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 419C07BD20EE196A007D64D4 /* schema.json */; };
 		44FC56D1DD00AF5145FB428E /* Pods_RouteMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C664D589F6F2BA3075CF39 /* Pods_RouteMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4111777A214F018C00CE28D0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		41214BAE20F9E68E00FEF8DC /* TransportOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOptionViewController.swift; sourceTree = "<group>"; };
 		41214BB020FB4D7B00FEF8DC /* TransportOptionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOptionHeaderView.swift; sourceTree = "<group>"; };
+		4125E4FE2148274600ADA054 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4125E5002148ED3000ADA054 /* MainBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBaseCell.swift; sourceTree = "<group>"; };
+		4125E5022148F49B00ADA054 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		4125E50421491EFB00ADA054 /* OneTransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTransportTypeCell.swift; sourceTree = "<group>"; };
+		4125E50621499F1800ADA054 /* TwoTransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTransportTypeCell.swift; sourceTree = "<group>"; };
+		4125E5082149A42300ADA054 /* ThreeTransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTransportTypeCell.swift; sourceTree = "<group>"; };
+		4125E50A2149A7CA00ADA054 /* FourTransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourTransportTypeCell.swift; sourceTree = "<group>"; };
+		4125E50C2149A97A00ADA054 /* FiveTransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveTransportTypeCell.swift; sourceTree = "<group>"; };
+		4125E50E2149ACB900ADA054 /* SixTransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixTransportTypeCell.swift; sourceTree = "<group>"; };
 		41274AFB211B2F4200E0B214 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		41274AFD211B8E4C00E0B214 /* GetSearchResultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSearchResultService.swift; sourceTree = "<group>"; };
 		41274B01211C21FE00E0B214 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -75,7 +94,7 @@
 		41560A702113B49400937143 /* SearchViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCellModel.swift; sourceTree = "<group>"; };
 		41560A732113B83000937143 /* ChooseLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLocationViewController.swift; sourceTree = "<group>"; };
 		41560A7521146D2200937143 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		416368A320EE68ED0045EB15 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		417464FE2148105500658D35 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		418E812B20FB5FD9003299ED /* RouteTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTypeCell.swift; sourceTree = "<group>"; };
 		418E812D20FB6DAC003299ED /* TransportTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportTypeCell.swift; sourceTree = "<group>"; };
 		418E812F20FCC545003299ED /* TransportType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportType.swift; sourceTree = "<group>"; };
@@ -90,7 +109,6 @@
 		419C07B020EE0FC3007D64D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		419C07B220EE0FC4007D64D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		419C07BB20EE147C007D64D4 /* SearchRouteVC.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SearchRouteVC.graphql; sourceTree = "<group>"; };
-		419C07BD20EE196A007D64D4 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		45C664D589F6F2BA3075CF39 /* Pods_RouteMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouteMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F6251EAA363CB72399B4AF /* Pods-RouteMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RouteMe/Pods-RouteMe.debug.xcconfig"; sourceTree = "<group>"; };
 		AE4979D3150F5F3B3F78A4FA /* Pods-RouteMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-RouteMe/Pods-RouteMe.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +170,7 @@
 				412991BB2118900800F9F0D6 /* NetworkDispatcher.swift */,
 				412991BD2118902F00F9F0D6 /* Response.swift */,
 				412991BF2118904F00F9F0D6 /* Service.swift */,
+				4111777A214F018C00CE28D0 /* Reachability.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -159,7 +178,6 @@
 		4150066920F4B83900A118EB /* Apollo */ = {
 			isa = PBXGroup;
 			children = (
-				416368A320EE68ED0045EB15 /* API.swift */,
 			);
 			path = Apollo;
 			sourceTree = "<group>";
@@ -198,6 +216,14 @@
 				41560A6E211342B800937143 /* SearchViewCell.swift */,
 				41274B01211C21FE00E0B214 /* SearchCell.swift */,
 				41274B06211C887500E0B214 /* RecentSearchHeader.swift */,
+				4125E5002148ED3000ADA054 /* MainBaseCell.swift */,
+				4125E5022148F49B00ADA054 /* BaseView.swift */,
+				4125E50421491EFB00ADA054 /* OneTransportTypeCell.swift */,
+				4125E50621499F1800ADA054 /* TwoTransportTypeCell.swift */,
+				4125E5082149A42300ADA054 /* ThreeTransportTypeCell.swift */,
+				4125E50A2149A7CA00ADA054 /* FourTransportTypeCell.swift */,
+				4125E50C2149A97A00ADA054 /* FiveTransportTypeCell.swift */,
+				4125E50E2149ACB900ADA054 /* SixTransportTypeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,8 +307,9 @@
 		419C07A520EE0FC0007D64D4 /* RouteMe */ = {
 			isa = PBXGroup;
 			children = (
+				4125E4FE2148274600ADA054 /* API.swift */,
+				417464FE2148105500658D35 /* schema.json */,
 				4134A32C2108FDB3008996F3 /* Networking */,
-				419C07BD20EE196A007D64D4 /* schema.json */,
 				4150066D20F4B88200A118EB /* Controllers */,
 				4150066C20F4B87B00A118EB /* Views */,
 				4150066F20F4C7F100A118EB /* Utils */,
@@ -372,7 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419C07B120EE0FC3007D64D4 /* LaunchScreen.storyboard in Resources */,
-				419C07BE20EE196A007D64D4 /* schema.json in Resources */,
+				417464FF2148105500658D35 /* schema.json in Resources */,
 				419C07AE20EE0FC3007D64D4 /* Assets.xcassets in Resources */,
 				419C07AC20EE0FC0007D64D4 /* Main.storyboard in Resources */,
 				419C07BC20EE147C007D64D4 /* SearchRouteVC.graphql in Resources */,
@@ -394,7 +421,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift";
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\n\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift --passthroughCustomScalars";
 		};
 		63162900FD21F02142819DD8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -405,6 +432,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RouteMe/Pods-RouteMe-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/PMAlertController/PMAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -414,6 +442,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PMAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -458,23 +487,31 @@
 				419C07A920EE0FC0007D64D4 /* SearchRouteViewController.swift in Sources */,
 				418E812E20FB6DAC003299ED /* TransportTypeCell.swift in Sources */,
 				412991B8211508FB00F9F0D6 /* Address.swift in Sources */,
+				4125E50521491EFB00ADA054 /* OneTransportTypeCell.swift in Sources */,
+				4125E50F2149ACB900ADA054 /* SixTransportTypeCell.swift in Sources */,
 				41274B07211C887500E0B214 /* RecentSearchHeader.swift in Sources */,
 				41274B02211C21FE00E0B214 /* SearchCell.swift in Sources */,
 				412991BA21188FCE00F9F0D6 /* Environment.swift in Sources */,
+				4125E5092149A42300ADA054 /* ThreeTransportTypeCell.swift in Sources */,
+				4125E5032148F49B00ADA054 /* BaseView.swift in Sources */,
+				4111777B214F018C00CE28D0 /* Reachability.swift in Sources */,
 				41274B09211CE13800E0B214 /* TransportOptionModel.swift in Sources */,
-				416368A420EE68ED0045EB15 /* API.swift in Sources */,
 				41214BB120FB4D7B00FEF8DC /* TransportOptionHeaderView.swift in Sources */,
 				41274B0B211E09AB00E0B214 /* RouteSettingController.swift in Sources */,
 				41214BAF20F9E68E00FEF8DC /* TransportOptionViewController.swift in Sources */,
 				41274AFE211B8E4C00E0B214 /* GetSearchResultService.swift in Sources */,
 				4134A32B2104F6DE008996F3 /* SearchResultViewController.swift in Sources */,
+				4125E50721499F1800ADA054 /* TwoTransportTypeCell.swift in Sources */,
+				4125E5012148ED3000ADA054 /* MainBaseCell.swift in Sources */,
 				418E812C20FB5FD9003299ED /* RouteTypeCell.swift in Sources */,
 				41560A7621146D2200937143 /* CustomLabel.swift in Sources */,
+				4125E50B2149A7CA00ADA054 /* FourTransportTypeCell.swift in Sources */,
 				4134A3292104F51B008996F3 /* SearchViewController.swift in Sources */,
 				412991BE2118902F00F9F0D6 /* Response.swift in Sources */,
 				41560A6F211342B800937143 /* SearchViewCell.swift in Sources */,
 				419C07A720EE0FC0007D64D4 /* AppDelegate.swift in Sources */,
 				4150067120F4C81000A118EB /* Extensions.swift in Sources */,
+				4125E50D2149A97A00ADA054 /* FiveTransportTypeCell.swift in Sources */,
 				418E813820FEB133003299ED /* SlideInPresentationController.swift in Sources */,
 				418E813620FEB034003299ED /* TimeOptionViewController.swift in Sources */,
 				41274B05211C707F00E0B214 /* RecentSearchModel.swift in Sources */,
@@ -482,6 +519,7 @@
 				4134A32620FF736B008996F3 /* TimePickerViewController.swift in Sources */,
 				41274B0D211ECCA900E0B214 /* RouteTypeModel.swift in Sources */,
 				41274AFC211B2F4200E0B214 /* SearchRequest.swift in Sources */,
+				4125E4FF2148274600ADA054 /* API.swift in Sources */,
 				41560A742113B83000937143 /* ChooseLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

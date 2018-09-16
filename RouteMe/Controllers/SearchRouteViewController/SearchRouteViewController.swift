@@ -9,6 +9,121 @@
 import UIKit
 import PMAlertController
 import CoreLocation
+import DZNEmptyDataSet
+
+extension SearchRouteViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+        
+        switch emptyMode {
+        case .starting:
+            return #imageLiteral(resourceName: "startingIcon")
+        case .noResultFound:
+            return #imageLiteral(resourceName: "noResultIcon")
+        case .noInternetConnection:
+            return  #imageLiteral(resourceName: "noConnectionIcon")
+
+        }
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let text: String
+        
+        switch emptyMode {
+        case .starting:
+            text = "Start finding routes to your destination"
+        case .noResultFound:
+            text = "No result found"
+        case .noInternetConnection:
+            text = "No internet connection. Please double check your network."
+            
+        }
+    
+        let attribs = [NSAttributedStringKey.font: UIFont(name: "Avenir-Heavy", size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.darkGray]
+        
+        return  NSAttributedString(string: text, attributes: attribs)
+    }
+}
+
+extension SearchRouteViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return itineries.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let itinery = itineries[indexPath.item]
+        
+        print(indexPath.item)
+        
+        switch itinery.legs.count {
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: oneCellID, for: indexPath) as! OneTransportTypeCell
+            
+            cell.intinery = itinery
+            
+            return cell
+        case 2:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: twoCellID, for: indexPath) as! TwoTransportTypeCell
+            
+            cell.intinery = itinery
+            
+            return cell
+        case 3:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: threeCellID, for: indexPath) as! ThreeTransportTypeCell
+            
+            cell.intinery = itinery
+            
+            return cell
+        case 4:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fourCellID, for: indexPath) as! FourTransportTypeCell
+            
+            cell.intinery = itinery
+            
+            return cell
+        case 5:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: fiveCellID, for: indexPath) as! FiveTransportTypeCell
+            
+            cell.intinery = itinery
+            
+            return cell
+        case 6:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sixCellID, for: indexPath) as! SixTransportTypeCell
+            
+            cell.intinery = itinery
+            
+            return cell
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sixCellID, for: indexPath) as! SixTransportTypeCell
+            
+            cell.intinery = itinery
+            
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.bounds.width, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+}
+
+extension SearchRouteViewController: TimePickerViewControllerDelegate {
+    func timePickerViewController(didSelectDepartureTime date: Date) {
+        let dateString = convertDateToStringFormat(date: date)
+        
+        timePickerBtn.setTitle(dateString + " \u{2193}", for: .normal)
+    }
+    
+    func timePickerViewController(didSelectArrivalTime date: Date) {
+        let dateString = convertDateToStringFormat(date: date)
+        
+        timePickerBtn.setTitle(dateString + " \u{2193}", for: .normal)
+    }
+    
+}
 
 extension SearchRouteViewController: SearchViewControllerDelegate {
     
@@ -84,6 +199,31 @@ extension SearchRouteViewController: TimeOptionViewControllerDelegate {
 
 class SearchRouteViewController: UIViewController {
     
+    let sixCellID = "sixCellID"
+    let fiveCellID = "fiveCellID"
+    let fourCellID = "fourCellID"
+    let threeCellID = "threeCellID"
+    let twoCellID = "twoCellID"
+    let oneCellID = "oneCellID"
+    
+    var itineries = [ItineryDetail]() {
+        didSet {
+            
+            if itineries.count == 0 {
+                self.emptyMode = .noResultFound
+            }
+        
+            self.routeRecommendationCollectionView.reloadData()
+            
+        }
+    }
+    
+    var emptyMode: EmptyMode = .starting {
+        didSet {
+            self.routeRecommendationCollectionView.reloadData()
+        }
+    }
+    
     var isInHighLightMode: Bool = false {
         didSet {
             if isInHighLightMode {
@@ -126,6 +266,14 @@ class SearchRouteViewController: UIViewController {
     var transportOptionWidthConstraint: NSLayoutConstraint?
     
     // MARK: Views
+    
+    lazy var indicatorView: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        indicator.backgroundColor = .white
+        indicator.color = .lightGray
+        return indicator
+    }()
     
     lazy var transportOptionBtn: UIButton = {
         let btn = UIButton(type: .system)
@@ -244,7 +392,7 @@ class SearchRouteViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .green
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
     
@@ -276,9 +424,6 @@ class SearchRouteViewController: UIViewController {
         
         setupViewController()
         
-        
-        
-        
     }
     
     private func setupNavBar() {
@@ -306,13 +451,36 @@ class SearchRouteViewController: UIViewController {
         return false
     }
     
+    private func setupCollectionView() {
+        routeRecommendationCollectionView.frame = CGRect(x: 0, y: 80, width: view.bounds.width, height: view.bounds.height)
+        
+        routeRecommendationCollectionView.delegate = self
+        
+        routeRecommendationCollectionView.dataSource = self
+        
+        routeRecommendationCollectionView.register(OneTransportTypeCell.self, forCellWithReuseIdentifier: oneCellID)
+        routeRecommendationCollectionView.register(TwoTransportTypeCell.self, forCellWithReuseIdentifier: twoCellID)
+        routeRecommendationCollectionView.register(ThreeTransportTypeCell.self, forCellWithReuseIdentifier: threeCellID)
+        routeRecommendationCollectionView.register(FourTransportTypeCell.self, forCellWithReuseIdentifier: fourCellID)
+        routeRecommendationCollectionView.register(FiveTransportTypeCell.self, forCellWithReuseIdentifier: fiveCellID)
+        routeRecommendationCollectionView.register(SixTransportTypeCell.self, forCellWithReuseIdentifier: sixCellID)
+        
+        routeRecommendationCollectionView.emptyDataSetSource = self
+        
+        routeRecommendationCollectionView.emptyDataSetDelegate = self
+    }
+    
     private func setupViewController() {
         
         view.backgroundColor = .white
         
         view.addSubview(routeRecommendationCollectionView)
         
-        routeRecommendationCollectionView.frame = CGRect(x: 0, y: 80, width: view.bounds.width, height: view.bounds.height)
+        setupCollectionView()
+        
+        view.addSubview(indicatorView)
+        
+        indicatorView.anchor(top: routeRecommendationCollectionView.topAnchor, left: routeRecommendationCollectionView.leftAnchor, bottom: nil, right: routeRecommendationCollectionView.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: routeRecommendationCollectionView.frame.height)
         
         view.addSubview(dimmingView)
         
@@ -367,6 +535,77 @@ class SearchRouteViewController: UIViewController {
     
     @objc private func handleFindRoutes() {
         print("Find suggested routes")
+        
+        guard let fromPlace = RouteSettingController.share.getFromDestinationName(), let fromPlaceCoordinate = RouteSettingController.share.getFromDestination(), let toPlaceCoordinate = RouteSettingController.share.getToDestination(), let toPlace = RouteSettingController.share.getToDestinationName() else {
+            
+            let alertVC = PMAlertController(title: "Error", description: "You need to choose location that you wish to go to and from in order to continue", image:nil, style: .alert)
+            
+            alertVC.addAction(PMAlertAction(title: "OK", style: .default, action: {
+                self.dismiss(animated: true, completion: nil)
+            }))
+            
+            self.present(alertVC, animated: true, completion: nil)
+            
+            return
+        }
+        
+        self.isInHighLightMode = !isInHighLightMode
+        
+        let isConnectedToNetWork = Reachability.isConnectedToNetwork()
+        
+        guard isConnectedToNetWork == true else {
+            
+            self.emptyMode = .noInternetConnection
+            
+            return
+        }
+        
+        self.indicatorView.startAnimating()
+        
+        var dateString: String
+        var timeString: String
+        var isArrive: Bool
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        dateString = dateFormatter.string(from: Date())
+        
+        let hourFormatter = DateFormatter()
+        hourFormatter.dateFormat = "HH:mm:ss"
+        timeString = hourFormatter.string(from: Date())
+        
+        if RouteSettingController.share.timeTransportOption == .now {
+            
+        } else {
+            
+            guard let dateStringFromSingleTon = RouteSettingController.share.dateString, let timeStringFromSingleTon = RouteSettingController.share.timeString else {
+                return
+            }
+            
+            dateString = dateStringFromSingleTon
+            timeString = timeStringFromSingleTon
+        }
+        
+        if RouteSettingController.share.timeTransportOption == .now || RouteSettingController.share.timeTransportOption == .departure {
+            isArrive = false
+        } else {
+            isArrive = true
+        }
+        
+        let getIntinaries = GetIntinariesQuery(fromPlace: fromPlace, fromLocationLatitude: fromPlaceCoordinate.latitude, fromLocationLongitude: fromPlaceCoordinate.longitude, toPlace: toPlace, toLocationLatitude: toPlaceCoordinate.latitude, toLocationLongitude: toPlaceCoordinate.longitude, modes: RouteSettingController.share.getTransportTypesInString(), date: dateString, time: timeString, arriveBy: isArrive)
+        
+        apollo.fetch(query: getIntinaries) { (result, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+            }
+            
+            guard let itineries = result?.data?.plan?.itineraries else { return }
+            
+            self.itineries = itineries.map { $0!.fragments.itineryDetail }
+            
+            self.indicatorView.stopAnimating()
+        }
+        
     }
     
     @objc private func handleSetEndDestination() {
@@ -576,6 +815,17 @@ class SearchRouteViewController: UIViewController {
         
         vc.pickingMode = pickingMode
         
+        vc.delegate = self
+        
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    private func convertDateToStringFormat(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+        let dateString = dateFormatter.string(from: date)
+        
+        return dateString
     }
 }

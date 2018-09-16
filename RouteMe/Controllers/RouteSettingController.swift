@@ -9,6 +9,12 @@
 import Foundation
 import CoreLocation
 
+enum TimeTransportOption: String {
+    case arrival
+    case departure
+    case now
+}
+
 class RouteSettingController: NSObject {
     static var share = RouteSettingController()
     
@@ -23,6 +29,12 @@ class RouteSettingController: NSObject {
     private var toDestinationName: String?
     
     private var toDestination: CLLocationCoordinate2D?
+    
+    var timeTransportOption: TimeTransportOption = .now
+    
+    var dateString: String?
+    
+    var timeString: String?
     
     private override init() {
         super.init()
@@ -42,12 +54,12 @@ class RouteSettingController: NSObject {
             self.transportTypes.append(.bus)
         }
         
-        if transportSetting.transportTypes.contains(.train) {
-            self.transportTypes.append(.train)
+        if transportSetting.transportTypes.contains(.rail) {
+            self.transportTypes.append(.rail)
         }
         
-        if transportSetting.transportTypes.contains(.metro) {
-            self.transportTypes.append(.metro)
+        if transportSetting.transportTypes.contains(.subway) {
+            self.transportTypes.append(.subway)
         }
         
         if transportSetting.transportTypes.contains(.tram) {
@@ -58,6 +70,19 @@ class RouteSettingController: NSObject {
             self.transportTypes.append(.ferry)
         }
         
+    }
+    
+    public func getTransportTypesInString() -> String {
+        var result = ""
+        
+        for (_, transportType) in transportTypes.enumerated() {
+            result.append(transportType.rawValue.uppercased())
+            result.append(", ")
+        }
+        
+        result.append("WALK")
+        
+        return result
     }
     
     public func getRouteType() -> RouteType {

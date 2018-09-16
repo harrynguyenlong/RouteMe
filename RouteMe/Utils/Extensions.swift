@@ -2,6 +2,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import Apollo
 
 let realm = try! Realm()
 
@@ -9,6 +10,12 @@ extension UINavigationController {
     open override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+}
+
+public enum EmptyMode: String {
+    case starting
+    case noResultFound
+    case noInternetConnection
 }
 
 
@@ -60,7 +67,7 @@ struct Constant {
             
             newTransportOption.isSaveLocally = true
             newTransportOption.routeType = .bestRoute
-            newTransportOption.transportTypes = [.bus, .train, .metro, .tram, .ferry]
+            newTransportOption.transportTypes = [.bus, .rail, .subway, .tram, .ferry]
             
             try! realm.write {
                 realm.add(newTransportOption)
@@ -108,6 +115,26 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+public typealias Long = Double
+//extension Double: JSONDecodable, JSONEncodable {
+//    public init(jsonValue value: JSONValue) throws {
+//        guard let string = value as? String else {
+//            throw JSONDecodingError.couldNotConvert(value: value, to: String.self)
+//        }
+//        guard let number = Double(string) else {
+//            throw JSONDecodingError.couldNotConvert(value: value, to: Double.self)
+//        }
+//
+//        self = number
+//    }
+//
+//    public var jsonValue: JSONValue {
+//        return String(self)
+//    }
+//}
+
+public typealias Polyline = String
 
 
 
